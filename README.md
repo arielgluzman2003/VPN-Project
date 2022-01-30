@@ -5,7 +5,7 @@ A VPN Server and Client kit, for user to set-up on computers he wishes to forwar
 uses high-standard encryption protocols, and supports multiple clients.
 
 ### Requirements
-* Unix-Based machine, a user with SUPER-USER (sudo) permissions
+* Unix-Based machine, a user with SUPER-USER (sudo) permissions (tested on [Ubuntu](https://ubuntu.com/download/desktop))
 * packages [rsa](https://stuvel.eu/software/rsa/), [Pycryptodome](https://www.pycryptodome.org/en/latest/src/introduction.html), [Scapy](https://scapy.net/) installed, see [installation](#installation)
 
 
