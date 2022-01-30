@@ -1,3 +1,5 @@
+31 January 2022<br />
+author: Ariel Gluzman (ariel.gluzman@gmail.com)<br /><br />
 # VPN-Project
 A VPN Server and Client kit, for user to set-up on computers he wishes to forward, hide, encrypt traffic through,
 uses high-standard encryption protocols, and supports multiple clients.
@@ -31,3 +33,33 @@ use:
 <code> $VPN-Project/VPN Client> sudo python3 main.py </code></br>
 **_START_** to connect and forward encrypted traffic</br>
 _**STOP**_ to disconnect and revert network configuration</br>
+
+## Recommended Setup
+#### Editing code in IDE
+if you wish to run edit & run code from and IDE (PyCharm etc.) you will need extra configurations for your interpreter:</br>
+first, create a bash file '_python-sudo.sh_':
+  ```
+  sudo python3 "$@"
+  ```
+give it execution permissions: </br>&nbsp;&nbsp;&nbsp;
+<code> $> sudo chmod +x python-sudo.sh </code></br>
+later you could run scripts as super-user without using _sudo_ explicitly: </br>&nbsp;&nbsp;&nbsp;
+<code> $> ./python-sudo.sh script.py </code></br>
+
+add '_python-sudo.sh_' as path for **_new project interpreter_**, scripts shall run as super-user.
+#### Make SUDO by default
+when running `sudo ..` commands for the first time in a new tab, user is asked to enter password,</br>
+and you may run into a problem running '_python-sudo.sh_' as **Project-Interpreter**, because it will not enter your password,</br> a simple configuration is to be done to disable the constant requirement to enter a password:
+
+In Unix System files there is a file '_**/etc/sudoers**_' in which permissions for users to use </br>
+super-user permissions without typing sudo and requiring administrator password.</br>
+_**it is unsafe**_ to edit file directly, although it is possible: </br>
+<code> $> sudo nano /etc/sudoers </code> </br>
+
+there is a tool called _**visudo**_ that helps safely edit '_**/etc/sudoers**_', use:</br>
+<code> $> sudo visudo </code> </br>
+
+add the following line at the end of the file (**_user_** stands for your username):</br>
+<code> %user ALL=(ALL) NOPASSWD:ALL </code> </br>
+
+Save file.
