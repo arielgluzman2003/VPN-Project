@@ -51,7 +51,7 @@ add '_python-sudo.sh_' as path for **_new project interpreter_**, scripts shall 
 when running `sudo ..` commands for the first time in a new tab, user is asked to enter password,</br>
 and you may run into a problem running '_python-sudo.sh_' as **Project-Interpreter**, because it will not enter your password,</br> a simple configuration is to be done to disable the constant requirement to enter a password:
 
-In Unix System files there is a file '_**/etc/sudoers**_' in which permissions for users to use </br>
+In Unix System files there is a file '_**/etc/sudoers**_' in which are configurations for users to use </br>
 super-user permissions without typing sudo and requiring administrator password.</br>
 _**it is unsafe**_ to edit file directly, although it is possible: </br>
 <code> $> sudo nano /etc/sudoers </code> </br>
