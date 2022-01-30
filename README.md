@@ -4,7 +4,8 @@ uses high-standard encryption protocols, and supports multiple clients.
 
 ### Requirements
 * Unix-Based machine, a user with SUPER-USER (sudo) permissions
-* packages [rsa](https://stuvel.eu/software/rsa/), [Pycryptodome](https://www.pycryptodome.org/en/latest/src/introduction.html), [Scapy](https://scapy.net/) installed, see installation
+* packages [rsa](https://stuvel.eu/software/rsa/), [Pycryptodome](https://www.pycryptodome.org/en/latest/src/introduction.html), [Scapy](https://scapy.net/) installed, see [installation](#installation)
+
 
 ## Installation
 Some operations require super-user (`sudo ..`) permissions to run properly,
