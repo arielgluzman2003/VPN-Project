@@ -2,11 +2,13 @@
 author: Ariel Gluzman (ariel.gluzman@gmail.com)<br /><br />
 # VPN-Project
 A VPN Server and Client kit, for user to set-up on computers he wishes to forward, hide, encrypt traffic through,
-uses high-standard encryption protocols, and supports multiple clients.
+uses high-standard encryption protocols[^1], and supports multiple clients.
+
+for explanation on components of the code see **_secure-sockets_**[^1], _**tuntap-interface**_[^2].
 
 ### Requirements
 * Unix-Based machine, a user with SUPER-USER (sudo) permissions (tested on [Ubuntu](https://ubuntu.com/download/desktop))
-* packages [rsa](https://stuvel.eu/software/rsa/), [Pycryptodome](https://www.pycryptodome.org/en/latest/src/introduction.html), [Scapy](https://scapy.net/) installed, see [installation](#installation)
+* packages **_rsa_**[^3], **_PycryptoDome_**[^4], **_Scapy_**[^5] installed, see [installation](#installation)
 
 
 ## Installation
@@ -51,7 +53,7 @@ add '_python-sudo.sh_' as path for **_new project interpreter_**, scripts shall 
 when running `sudo ..` commands for the first time in a new tab, user is asked to enter password,</br>
 and you may run into a problem running '_python-sudo.sh_' as **Project-Interpreter**, because it will not enter your password,</br> a simple configuration is to be done to disable the constant requirement to enter a password:
 
-In Unix System files there is a file '_**/etc/sudoers**_' in which are configurations for users to use </br>
+In Unix System files there is a file '_**/etc/sudoers**_'[^6] in which are configurations for users to use </br>
 super-user permission without typing sudo and requiring administrator password.</br>
 _**it is unsafe**_ to edit file directly, although it is possible: </br>
 <code> $> sudo nano /etc/sudoers </code> </br>
@@ -63,3 +65,10 @@ add the following line at the end of the file (**_user_** stands for your userna
 <code> %user ALL=(ALL) NOPASSWD:ALL </code> </br>
 
 Save file.
+
+[^1]: this project integrates an older version of [secure-sockets](https://github.com/arielgluzman2003/secure-sockets) library
+[^2]: this project integrates [tuntap-python-interface](https://github.com/arielgluzman2003/tuntap-python-interface) library
+[^3]: [rsa](https://stuvel.eu/software/rsa/) library
+[^4]: [Pycryptodome](https://www.pycryptodome.org/en/latest/src/introduction.html) library
+[^5]: [Scapy](https://scapy.net/) library
+[^6]: Further Explanation on [/etc/sudoers](https://man7.org/linux/man-pages/man5/sudoers.5.html)
